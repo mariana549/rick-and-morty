@@ -25,11 +25,11 @@ async function pegarPersonagens () {
          </section>
          <section>
             <h3 class="Localizacao">Última localização conhecida:</h3>
-            <p class="IdUltimalocalizazao">${personagem.origin.name}</p>
+            <p class="IdUltimalocalizazao paragrafo">${personagem.origin.name}</p>
          </section>
          <section>
             <h3 class="Localizacao">Visto pela primeira vez em:</h3>
-            <p class="idPrimeiraLocalizacao">${personagem.location.name}</p>
+            <p class="idPrimeiraLocalizacao paragrafo">${personagem.location.name}</p>
          </section>
       </section>
       </section>
