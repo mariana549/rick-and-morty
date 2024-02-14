@@ -11,9 +11,10 @@ async function pegarPersonagens () {
    let data = await resposta.json()
 
    const personagens = data.results
-
-   function imprimirECortar(array) {
-      let cincoCard = array.splice(0, 5);
+   
+   let indice = 0;
+   function imprimirECortar(array, indice) {
+      let cincoCard = array.slice(indice, indice + 5);
       return cincoCard;
    }
 
@@ -49,14 +50,18 @@ async function pegarPersonagens () {
       container.innerHTML = html
    }
 
-   let cincoPersonagens = imprimirECortar(personagens);
+   let cincoPersonagens = imprimirECortar(personagens, indice);
 
    criarCards(cincoPersonagens);
 
-   setTimeout(() => {
-      cincoPersonagens = imprimirECortar(personagens);
+   indice = indice + 5;
+
+   let intervalo = setInterval(() => {
+      indice = indice % personagens.length;
+      cincoPersonagens = imprimirECortar(personagens, indice);
       criarCards(cincoPersonagens);
-   }, 500);
+      indice = indice + 5;
+   }, 10000);
    
    
 }
@@ -64,16 +69,6 @@ pegarPersonagens()
 
 
 
-
-
-
-
-
-
-
-
-
-// console.log(cincoNum)
 
 
 
