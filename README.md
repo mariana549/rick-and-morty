@@ -1,2 +1,2 @@
-# rick and moty
+# rick and morty
  
