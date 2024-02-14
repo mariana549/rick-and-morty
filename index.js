@@ -12,32 +12,68 @@ async function pegarPersonagens () {
 
    const personagens = data.results
 
-   personagens.forEach(personagem => {
-      html += `
-      <section class="card">
-      <section>
-         <img src="${personagem.image}" alt="personagem" class="personagemImg">
-      </section>
-      <section class="section">
-         <section class="informacoes-principais">
-            <h1 class="tituloDoCard">${personagem.name}</h1>
-            <span class="status">${status}</span>
-         </section>
+   function imprimirECortar(array) {
+      let cincoCard = array.splice(0, 5);
+      return cincoCard;
+   }
+
+   function criarCards(array) {
+      html = `
+         <header class="header">
+         <h1 class="titulo">Rick and Morty</h1>
+         </header>
+      `;
+      array.forEach(personagem => {
+         html += `
+         <section class="card">
          <section>
-            <h3 class="Localizacao">Última localização conhecida:</h3>
-            <p class="IdUltimalocalizazao paragrafo">${personagem.origin.name}</p>
+            <img src="${personagem.image}" alt="personagem" class="personagemImg">
          </section>
-         <section>
-            <h3 class="Localizacao">Visto pela primeira vez em:</h3>
-            <p class="idPrimeiraLocalizacao paragrafo">${personagem.location.name}</p>
+         <section class="section">
+            <section class="informacoes-principais">
+               <h1 class="tituloDoCard">${personagem.name}</h1>
+               <span class="status">${status}</span>
+            </section>
+            <section>
+               <h3 class="Localizacao">Última localização conhecida:</h3>
+               <p class="IdUltimalocalizazao paragrafo">${personagem.origin.name}</p>
+            </section>
+            <section>
+               <h3 class="Localizacao">Visto pela primeira vez em:</h3>
+               <p class="idPrimeiraLocalizacao paragrafo">${personagem.location.name}</p>
+            </section>
          </section>
-      </section>
-      </section>
-      `
+         </section>
+         `
+      });
       container.innerHTML = html
-   });
+   }
+
+   let cincoPersonagens = imprimirECortar(personagens);
+
+   criarCards(cincoPersonagens);
+
+   setTimeout(() => {
+      cincoPersonagens = imprimirECortar(personagens);
+      criarCards(cincoPersonagens);
+   }, 500);
+   
+   
 }
 pegarPersonagens()
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(cincoNum)
 
 
 
