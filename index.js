@@ -11,7 +11,7 @@ async function pegarPersonagens () {
    let data = await resposta.json()
 
    const personagens = data.results
-   
+
    let indice = 0;
    function imprimirECortar(array, indice) {
       let cincoCard = array.slice(indice, indice + 5);
@@ -61,7 +61,7 @@ async function pegarPersonagens () {
       cincoPersonagens = imprimirECortar(personagens, indice);
       criarCards(cincoPersonagens);
       indice = indice + 5;
-   }, 10000);
+   }, 11000);
    
    
 }
