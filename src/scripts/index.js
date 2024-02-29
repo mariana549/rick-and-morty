@@ -1,6 +1,5 @@
 import { getCaracter } from "./services/caracter.js"
-console.log(getCaracter())
-// import { dados } from "./objects/dados.js";
+import { dados } from "./objects/dados.js";
 
 // const container = document.querySelector('.container');
 // let html = `
@@ -12,7 +11,8 @@ console.log(getCaracter())
 
 async function mostrarInfo () {
    const caracterResponse = await getCaracter()
-   console.log(caracterResponse)
+   const results = caracterResponse.results
+   
 }
 mostrarInfo()
 
