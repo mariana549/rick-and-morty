@@ -1,4 +1,4 @@
-let url = `https://rickandmortyapi.com/api/character`
+let url = `https://rickandmortyapi.com/api/character?page=10`
 const container = document.querySelector('.container');
 let html = `
    <header class="header">
@@ -67,8 +67,19 @@ async function pegarPersonagens () {
 }
 pegarPersonagens()
 
+// async function pegaroutros(){
+//    let response = await fetch(`https://rickandmortyapi.com/api/location`)
+//    let data = await response.json();
+//    console.log("pegando localização",data);
+// }
+// pegaroutros()
 
-
+// async function pegarEpisode(){
+//    let response = await fetch(`https://rickandmortyapi.com/api/episode?page=3`)
+//    let data = await response.json();
+//    console.log("pegando epsodios",data);
+// }
+// pegarEpisode()
 
 
 
