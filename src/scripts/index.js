@@ -1,4 +1,6 @@
-let url = ``
+import { getCaracter } from "./services/caracter";
+import { dados } from "./objects/dados.js";
+
 const container = document.querySelector('.container');
 let html = `
    <header class="header">
