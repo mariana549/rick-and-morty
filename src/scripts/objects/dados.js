@@ -1,5 +1,5 @@
-const dados = {
-   image: "",
+const dados = [
+  {image: "",
    name: "",
    status: "",
    origin: "",
@@ -10,7 +10,8 @@ const dados = {
       this.status = inforApi.status;
       this.origin = inforApi.origin.name;
       this.loocation = inforApi.loocation.name;
-   }
-}
+      console.log(origin)
+   }}
+]
 
 export { dados }

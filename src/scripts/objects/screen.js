@@ -1,9 +1,6 @@
+import { indice } from "./imprimir.js"
+import { imprimirECortar } from "./imprimir.js";
 
-let indice = 0;
-function imprimirECortar(array, indice) {
-   let cincoCard = array.slice(indice, indice + 5);
-   return cincoCard;
-}
 function criarCards(array) {
    html = `
       <header class="header">
