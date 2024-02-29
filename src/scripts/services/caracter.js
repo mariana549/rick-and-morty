@@ -1,6 +1,6 @@
-import { baseUrl , quantidade } from "..variaveis.js"
+import { baseUrl , quantidade } from "../variaveis.js"
 
-async function getCaracter(dados){
+async function getCaracter(){
    const response = await fetch(`${baseUrl}/character?page=${quantidade}`)
    return await response.json()
 }
