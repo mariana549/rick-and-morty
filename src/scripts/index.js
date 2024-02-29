@@ -1,4 +1,4 @@
-let url = `https://rickandmortyapi.com/api/character?page=10`
+let url = ``
 const container = document.querySelector('.container');
 let html = `
    <header class="header">
@@ -7,8 +7,7 @@ let html = `
 `;
 
 async function pegarPersonagens () {
-   let resposta = await fetch(url)
-   let data = await resposta.json()
+
 
    const personagens = data.results
 

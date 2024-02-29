@@ -1,4 +1,4 @@
-const baseUrl = "";
-const mostrarQuantidade = 10;
+const baseUrl = "https://rickandmortyapi.com/api/";
+const quantidade = 10;
 
-export { baseUrl, mostrarQuantidade }
+export { baseUrl, quantidade }
