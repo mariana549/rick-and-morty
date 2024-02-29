@@ -11,8 +11,8 @@ import { dados } from "./objects/dados.js";
 
 async function mostrarInfo () {
    const caracterResponse = await getCaracter()
-   const results = caracterResponse.results
-   console.log(results)
+   const results = caracterResponse.results[1]
+
    dados.setInfo(results)
 }
 mostrarInfo()
