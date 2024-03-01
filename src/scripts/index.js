@@ -1,8 +1,7 @@
 import { getCaracter } from "./services/caracter.js"
 import { dados } from "./objects/dados.js";
-
-
-
+import { screen } from "./objects/screen.js";
+// import { imprimirECortar } from "./objects/imprimir.js";
 
 async function mostrarInfo () {
    const caracterResponse = await getCaracter()
@@ -10,9 +9,12 @@ async function mostrarInfo () {
 
    dados.setInfo(results)
 
+   screen.cardInfo(dados)
 
 }
 mostrarInfo()
+
+
 
 // async function pegaroutros(){
 //    let response = await fetch(`https://rickandmortyapi.com/api/location`)
@@ -28,38 +30,4 @@ mostrarInfo()
 // }
 // pegarEpisode()
 
-
-
-// forma de resulção inicial incompleta
-
-// let index = 0;
-
-// async function Mostrar () {
-//    let [personagem] = await Promise.all([pegarPersonagens()])
-
-//    let {name, image, status, species, origin, location} = personagem.results[0]
-   
-//    let nome = document.querySelector(".tituloDoCard")
-//    let imagemPersonagem = document.querySelector(".personagemImg")
-//    let statusPersonagem = document.querySelector(".status")
-//    let origemPersonagem = document.querySelector(".IdUltimalocalizazao")
-//    let primeiralocalizazaoPersonagem = document.querySelector(".idPrimeiraLocalizacao")
-   
-//    nome.innerHTML = name
-//    imagemPersonagem.src = image
-//    statusPersonagem.innerHTML = `${status} - ${species}`
-//    origemPersonagem.innerHTML = origin.name
-//    primeiralocalizazaoPersonagem.innerHTML = location.name
-// }
-
-// let card = document.querySelector(".card")
-
-// for (let i = 0; i < 3; i++) {
-//    let novaDiv = document.createElement("section");
-//    novaDiv.classList.add("card")
-//    novaDiv.innerHTML = card.innerHTML;
-//    let container = document.querySelector(".container")
-//    container.appendChild(novaDiv);
-//    Mostrar()
-// };
 
