@@ -1,19 +1,16 @@
 import { getCaracter } from "./services/caracter.js"
 import { dados } from "./objects/dados.js";
 
-// const container = document.querySelector('.container');
-// let html = `
-//    <header class="header">
-//    <h1 class="titulo">Rick and Morty</h1>
-//    </header>
-// `;
+
 
 
 async function mostrarInfo () {
    const caracterResponse = await getCaracter()
-   const results = caracterResponse.results[1]
+   const results = caracterResponse.results
 
    dados.setInfo(results)
+
+
 }
 mostrarInfo()
 
