@@ -6,11 +6,23 @@
 const screen = {
    cardConteiner: document.querySelector('.container'),
    cardInfo(array) {
+      console.log(array)
       let html = `
       <header class="header">
          <h1 class="titulo">Rick and Morty</h1>
       </header>`;
+
       array.personagem.forEach(person => {
+         const aliveDead = () => {
+            if (person.status === "Alive"){
+               let alive = `🟢 Alive`
+               return alive
+            } else if (person.status === "Dead"){
+               let dead = `🔴 Dead`
+               return dead
+            } 
+         }
+
          html += `
             <section class="card">
                <section>
@@ -19,7 +31,7 @@ const screen = {
                <section class="section">
                   <section class="informacoes-principais">
                      <h1 class="tituloDoCard">${person.name}</h1>
-                     <span class="status">${person.status}</span>
+                     <span class="status">${aliveDead()} - ${person.species}</span>
                   </section>
                   <section>
                      <h3 class="Localizacao">Última localização conhecida:</h3>
