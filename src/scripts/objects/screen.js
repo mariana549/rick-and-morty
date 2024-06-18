@@ -1,18 +1,14 @@
-// import { indice } from "./imprimir.js"
-// import { imprimirECortar } from "./imprimir.js";
-// import { intervalo } from "./intervalo.js";
 
 
 const screen = {
    cardConteiner: document.querySelector('.container'),
    cardInfo(array) {
-      console.log(array)
       let html = `
       <header class="header">
          <h1 class="titulo">Rick and Morty</h1>
       </header>`;
-
-      array.personagem.forEach(person => {
+   
+      array.forEach(person => {
          const aliveDead = () => {
             if (person.status === "Alive"){
                let alive = `🟢 Alive`
@@ -20,12 +16,16 @@ const screen = {
             } else if (person.status === "Dead"){
                let dead = `🔴 Dead`
                return dead
-            } 
+            } else {
+               let unknown = `Unknown`
+               return unknown
+            }
          }
 
          html += `
             <section class="card">
-               <section>
+            <section>
+                  <span class="id">${person.id}</span>
                   <img src="${person.image}" alt="personagem" class="personagemImg">
                </section>
                <section class="section">
@@ -34,11 +34,11 @@ const screen = {
                      <span class="status">${aliveDead()} - ${person.species}</span>
                   </section>
                   <section>
-                     <h3 class="Localizacao">Última localização conhecida:</h3>
+                     <h3 class="Localizacao">Last known location:</h3>
                      <p class="IdUltimalocalizazao paragrafo">${person.origin.name}</p>
                   </section>
                   <section>
-                     <h3 class="Localizacao">Visto pela primeira vez em:</h3>
+                     <h3 class="Localizacao">First seen in:</h3>
                      <p class="idPrimeiraLocalizacao paragrafo">${person.location.name}</p>
                   </section>
                </section>
@@ -46,28 +46,10 @@ const screen = {
       });
       this.cardConteiner.innerHTML = html
 
-      let indice = 0;
-      function imprimirECortar(array, indice) {
-         let cincoCard = array.personagem.slice(indice, indice + 5);
-         return cincoCard;
-      }
-
-      let cincoPersonagens = imprimirECortar(array, indice);
-
-
-      // let intervalo = setInterval(() => {
-      //    indice = indice % array.length;
-      //    cincoPersonagens = imprimirECortar(array, indice);
-      //    cardInfo(cincoPersonagens);
-      //    indice = indice + 5;
-      // }, 11000);
-      // clearInterval(intervalo)
    } 
 };
 
 export { screen };
-
-
 
 
 

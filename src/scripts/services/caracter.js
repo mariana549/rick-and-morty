@@ -1,7 +1,9 @@
-import { baseUrl , pagina } from "../variaveis.js"
+import { passarPaginas } from "../objects/funcoes.js"
+import { screen } from "../objects/screen.js"
+import { baseUrl , limite, pagina  } from "../variaveis.js"
 
-async function getCaracter(){
-   const response = await fetch(`${baseUrl}/character?page=${pagina}`)
+async function getCaracter(pagina){
+   const response = await fetch(`${baseUrl}character?page=${pagina}`)
    return await response.json()
 }
 
