@@ -50,8 +50,12 @@ const screen = {
          `
       });
       this.cardConteiner.innerHTML = html
-      document.querySelector(".prev").addEventListener("click", () => prevPage(defaultFilter));
-      document.querySelector(".next").addEventListener("click", () => nextPage(defaultFilter));
+      
+      document.querySelector(".prev")
+      .addEventListener("click", () => prevPage(defaultFilter));
+
+      document.querySelector(".next")
+      .addEventListener("click", () => nextPage(defaultFilter));
 
       sumir(defaultFilter.page)
    }

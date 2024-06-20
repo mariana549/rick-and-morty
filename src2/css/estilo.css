@@ -59,8 +59,7 @@ body{
 }
 
 .buttonChangePage:hover{
-   color:#e98c00;
-   background-color: white;
+   background-color: #00B0C9;
 }
 
 .botaoSumir {
@@ -124,7 +123,6 @@ body{
    padding: 2.5px;
    border-radius: 2px;
    color: #000000;
-   /* background-color: rgba(240, 248, 255, 0.861); */
    background-color: #02cae5;
    font-size: 12px;
    font-weight: bold;
@@ -176,4 +174,8 @@ body{
    -webkit-text-stroke: 0.5px #1a6ba5;
    text-decoration: none;
    margin: auto;
+}
+
+.link:hover {
+   color: #f6ff00;
 }
