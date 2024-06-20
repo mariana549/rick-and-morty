@@ -1,11 +1,14 @@
+body{
+   background-color: #021c2e;
+   font-family: 'Roboto', sans-serif;
+}
+
 .main {
    display: flex;
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
-   background-color: #272B33;
    padding-bottom: 30px;
-   font-family: 'Roboto', sans-serif;
    min-height: 100vh;
 }
 
@@ -16,21 +19,20 @@
    justify-content: center;
    width: 100%;
    height: 330px;
-   background-color: white;
+   background-color: #F7F7F7;
    margin-bottom: 50px;
-   box-shadow: 2px 8px 9px 0px #0000001e;
+   box-shadow:    2px 8px 9px 0px #0000001e;
    position: relative;
 }
 
-.titulo {
-   padding: 50px;
-   font-size: 100px;
-   font-weight: 700;
-}
-
-.titulo:hover {
-   color: #e98c00;
-   text-shadow: 1px 1px 5px #00000057;
+.logo{
+   background: url("../assets/image/image.png");
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   margin-top: 15px;
+   width: 880px;
+   height: 315px;
 }
 
 .boxButtons {
@@ -45,7 +47,7 @@
    font-weight: bolder;
    padding: 0px 7px;
    font-size: 18px;
-   color: #adb1be;
+   color: #d4d7e4;
 }
 
 .buttonChangePage {
@@ -65,53 +67,55 @@
    display: none;
 }
 
-.botaoAparecer {
-   display: inline-block;
-}
-
 .card {
-   background-color: #3C3E44;
+   background-color: #030d0f;
+   border: 3px solid #00B0C9;
    display: flex;
-   width: 600px;
-   height: 220px;
+   flex-direction: column;
+   width: 270px;
+   min-height: 510px;
    margin: 13.5px;
    border-radius: 0.5rem;
-   box-shadow: 2px 1px 3px 0px #0000003e;
+   box-shadow: 0px 3px 5px 0px #0000008d;
    position: relative;
 }
 
-.none {
-   display: none;
-}
-
 .personagemImg {
-   height: 220px;
-   border-radius: 0.5rem 0px 0px 0.5rem;
+   width: 100%;
+   border-radius: 0.2rem 0.2rem 0px 0px;
 }
 
-.section {
-   padding: 13.5px;
+.informacoes-principais {
+   /* padding: 12px 15px; */
+   padding: 0px 15px;
+   padding-top: 10px;
    width: 100%;
    display: flex;
    flex-direction: column;
+   align-items: center;
    justify-content: space-between;
-   color: white;
+   color: #ffffff;
 }
 
 .tituloDoCard {
-   font-size: 1.5rem;
+   font-size: 1.6rem;
+   color: #02cae5;
+   margin-bottom: 3px;
+   text-align: center;
 }
 
-.tituloDoCard:hover,
-.paragrafo:hover {
-   color: #FF9800;
+.dadosLocalização {
+   padding: 10px 15px;
 }
 
 .Localizacao {
-   color: #989E9E;
-   font-size: 16px;
-   font-weight: 500;
-   margin-bottom: 5px;
+   color: #00B0C9;
+   font-size: 18px;
+   margin: 8px 0px 4px 0px;
+}
+
+.paragrafo {
+   color: #dbdbdb;
 }
 
 .id {
@@ -119,13 +123,57 @@
    margin: 5px;
    padding: 2.5px;
    border-radius: 2px;
-   color: #272B33;
-   background-color: rgba(240, 248, 255, 0.766);
+   color: #000000;
+   /* background-color: rgba(240, 248, 255, 0.861); */
+   background-color: #02cae5;
    font-size: 12px;
    font-weight: bold;
+   min-width: 20px;
+   text-align: center;
 }
 
-#icon {
-   width: 1px;
-   height: 1px;
+.footer {
+   width: 100%;
+   height: 150px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+.imageRickFooter {
+   width: 350px;
+   position: absolute;
+   top: -200px;
+   left: 200px;
+   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+   0%, 100% {
+     transform: translateY(0);
+   }
+   50% {
+     transform: translateY(-30px);
+   }
+ }
+
+ .box {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+ }
+
+ .tituloFooter, .apresentacaoApi {
+   color: #bfbfbf;
+ }
+
+ .link {
+   font-family: monospace;
+   color: #00B0C9;
+   font-size: 20px;
+   -webkit-text-stroke: 0.5px #1a6ba5;
+   text-decoration: none;
+   margin: auto;
 }

@@ -18,25 +18,28 @@ export async function nextPage(defaultFilter) {
 
 export async function prevPage(defaultFilter) {
    if (defaultFilter.page > 1) {
-      defaultFilter.page --
+      defaultFilter.page--
    }
 
    return dadosRequest(defaultFilter)
 }
 
-export function sumirBotao (page) {
+export function sumir (page) {
    let prevButton = document.querySelector(".prev")
    let nextButton = document.querySelector(".next")
+   let imgRickPortal = document.querySelector(".imageRickFooter")
 
    if (page === 1) {
       prevButton.classList.add("botaoSumir")
    } else {
-      prevButton.classList.add("botaoAparecer")
+      prevButton.classList.remove("botaoSumir")
    }
 
    if (page === 42) {
       nextButton.classList.add("botaoSumir")
+      imgRickPortal.classList.add("botaoSumir")
    } else {
-      nextButton.classList.add("botaoAparecer")
+      nextButton.classList.remove("botaoSumir")
+      imgRickPortal.classList.remove("botaoSumir")
    }
 }
