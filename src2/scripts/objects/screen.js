@@ -1,19 +1,54 @@
+import { getCaracter } from "../services/caracter.js";
 import { defaultFilter } from "./defaultFilters.js";
-import { nextPage, prevPage, sumir } from "./funcoes.js";
+import { filtros, nextPage, pegarElementos, prevPage, sumir } from "./funcoes.js";
 
 const screen = {
    cardConteiner: document.querySelector('.main'),
    cardInfo(array) {
       let html = `
       <header class="header">
-      <div class="logo"></div>
-      <div class="boxButtons">
-            <button class="buttonChangePage prev">◀</button>
-            <span class="pageCurrent">Page ${defaultFilter.page}</span>
-            <button class="buttonChangePage next">▶</button>
+         <div class="logo"></div>
+         <form class="FormFilters">
+         <select name="species" id="species" class="filter">
+         <option value="" default class="options">Species</option>
+         <option value="animal" class="options">Animal</option>
+         <option value="alien" class="options">Alien</option>
+         <option value="disease" class="options">Doença</option>
+         <option value="unknown" class="options">Desconhecido</option>
+         <option value="human" class="options">Humano</option>
+               <option value="humanoid" class="options">Humanoide</option>
+               <option value="mythological" class="options">Mitologico</option>
+               <option value="poopybutthole" class="options">Poopybutthole</option>
+               <option value="Robot" class="options">Robo</option>
+            </select>
+            <select name="gender" id="gender" class="filter">
+               <option value="" class="options">
+               Gender
+               </option>
+               <option value="female" class="options">Feminino</option>
+               <option value="male" class="options">Masculino</option>
+               <option value="genderless" class="options">Sem Genero</option>
+               <option value="unknown" class="options">Desconhecido</option>
+            </select>
+            <select name="status" id="status" class="filter">
+               <option value="" class="options">
+               Status
+               </option>
+               <option value="alive" class="options">Vivo</option>
+               <option value="dead" class="options">Morto</option>
+               <option value="unknown" class="options">Desconhecido</option>
+               </select>
+               <div>
+                  <input type="text" id="name" placeholder="Filter by name..." class="filter search">
+                  <button type="submit" id="buttonSubmit" class="filter"> Search </button>
+               </div>
+               </form>
+         <div class="boxButtons">
+         <button class="buttonChangePage prev">◀</button>
+         <span class="pageCurrent">Page ${defaultFilter.page}</span>
+         <button class="buttonChangePage next">▶</button>
          </div>
-      </header>`;
-      console.log(array)
+         </header>`;
 
       array.forEach(person => {
          const aliveDead = () => {
@@ -50,14 +85,21 @@ const screen = {
          `
       });
       this.cardConteiner.innerHTML = html
-      
+
       document.querySelector(".prev")
-      .addEventListener("click", () => prevPage(defaultFilter));
+         .addEventListener("click", () => prevPage(defaultFilter));
 
       document.querySelector(".next")
-      .addEventListener("click", () => nextPage(defaultFilter));
+         .addEventListener("click", () => nextPage(defaultFilter));
 
-      sumir(defaultFilter.page)
+      document.getElementById("name")
+         .addEventListener("change", (e) => {
+            e.preventDefault();
+            filtros(e)
+         });
+
+      sumir(defaultFilter)
+      pegarElementos()
    }
 };
 

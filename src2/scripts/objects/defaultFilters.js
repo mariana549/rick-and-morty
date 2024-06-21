@@ -1,4 +1,8 @@
 export const defaultFilter = {
+   name: "",
+   species: "",
+   gender: "", 
+   status: "",
    page: 1,
 }
 
