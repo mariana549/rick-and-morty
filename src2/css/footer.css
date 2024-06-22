@@ -1,0 +1,49 @@
+.box, .footer {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+}
+
+.footer {
+   align-items: center;
+   width: 100%;
+   background-color: #06121d;
+}
+
+.box {
+   flex-direction: column;
+}
+
+.imageRickFooter {
+   width: 350px;
+   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+   0%,
+   100% {
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(-30px);
+   }
+}
+
+.tituloFooter,
+.apresentacaoApi {
+   color: #bfbfbf;
+}
+
+.link {
+   font-family: monospace;
+   color: #00B0C9;
+   font-size: 20px;
+   -webkit-text-stroke: 0.7px #1a6ba5;
+   text-decoration: none;
+   margin: auto;
+}
+
+.link:hover {
+   color: #f6ff00;
+}

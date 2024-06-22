@@ -1,0 +1,8 @@
+body {
+   background-color: #021c2e;
+   font-family: 'Roboto', sans-serif;
+}
+
+.botaoSumir {
+   display: none;
+}

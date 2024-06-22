@@ -77,10 +77,9 @@ export function pegarElementos() {
    })
 }
 
-export function filtros(e) {
+export function filterNames(e) {
    document.getElementById("buttonSubmit").addEventListener("click", (event) => {
       event.preventDefault()
-      defaultFilter.name = e.target.value
-      dadosRequest(defaultFilter)
+      handleFilter(e, "name")
    })
 }
