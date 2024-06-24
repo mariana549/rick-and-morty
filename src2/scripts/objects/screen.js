@@ -58,7 +58,7 @@ const screen = {
       array.forEach(person => {
          const aliveDead = () => {
             if (person.status === "Alive") {
-               let alive = `🟡 Alive`
+               let alive = `🟢 Alive`
                return alive
             } else if (person.status === "Dead") {
                let dead = `💀 Dead`
@@ -77,8 +77,30 @@ const screen = {
                </section>
                <section class="informacoes-principais">
                   <h1 class="tituloDoCard">${person.name}</h1>
-                  <span>${person.species} - ${person.gender}</span>
-                  <p class="genero">${aliveDead()}</p>
+                  <table class="table"> 
+                     <thead>
+                        <tr>
+                           <th class="th">Species</th>
+                        </tr>
+                        <tr>
+                           <th class="th">Gender</th>
+                        <tr>
+                        <tr>
+                           <th class="th">Status</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                           <tr>
+                              <td class="td">${person.species}</td>
+                           </tr>                     
+                           <tr>
+                              <td class="td">${person.gender}</td>
+                           </tr>                     
+                           <tr>
+                              <td class="td">${aliveDead()}</td>
+                           </tr>                     
+                     </tbody>
+                  </table>
                </section>
                <section class="dadosLocalização">
                   <h3 class="Localizacao">Last known location:</h3>

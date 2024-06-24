@@ -25,21 +25,36 @@
 }
 
 .informacoes-principais {
-   padding: 0px 15px;
-   padding-top: 10px;
    width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: space-between;
    color: #ffffff;
+   padding: 10px 15px 0px 15px;
 }
 
 .tituloDoCard {
    font-size: 1.6rem;
    color: #02cae5;
-   margin-bottom: 3px;
-   text-align: center;
+}
+
+.table {
+   color: #dbdbdb;
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding-top: 5px;
+}
+
+.th {
+   text-align: start;
+   color: #00B0C9;
+   font-size: 18px;
+}
+
+.td {
+   text-align: end;
 }
 
 .dadosLocalização {
@@ -67,4 +82,72 @@
    font-weight: bold;
    min-width: 20px;
    text-align: center;
+}
+
+@media (max-width: 1500px) {
+   .card {
+      width: 268px;
+      min-height: 510px;
+      margin: 13.5px;
+   }
+   
+   .informacoes-principais {
+      padding: 10px 15px 0px 15px;
+   }
+   
+   .tituloDoCard {
+      font-size: 1.55rem;
+   }
+
+   .th {
+      text-align: start;
+      font-size: 17.5px;
+   }
+
+   .td {
+      font-size: 15.5px;
+   }
+   
+   .dadosLocalização {
+      padding: 10px 15px;
+   }
+   
+   .Localizacao {
+      font-size: 17.55px;
+      margin: 8px 0px 4px 0px;
+   }
+   
+}
+
+@media (max-width: 1200px) {
+   .card {
+      width: 265px;
+      min-height: 505px;
+      margin: 13.5px;
+   }
+   
+   .informacoes-principais {
+      padding: 9px 14px 0px 14px;
+   }
+   
+   .tituloDoCard {
+      font-size: 1.5rem;
+   }
+
+   .th {
+      font-size: 17px;
+   }
+
+   .td {
+      font-size: 15px;
+   }
+   
+   .dadosLocalização {
+      padding: 9px 14px;
+   }
+   
+   .Localizacao {
+      font-size: 17px;
+      margin: 7.5px 0px 3.5px 0px;
+   }
 }
