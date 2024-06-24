@@ -32,7 +32,7 @@ Clique [aqui](https://rick-and-morty-psi-five.vercel.app/) e veja o projeto func
    - Isso criará uma cópia do projeto em sua máquina.
 
 2. **Inicie o Servidor Local**:
-   - com o liver server inicie um servidor local
+   - com o live server inicie um servidor local
 
 
 ## Imagens 📷
