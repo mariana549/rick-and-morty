@@ -4,7 +4,7 @@ Este projeto é um desafio pessoal que propus a mim mesma para praticar mais sob
 
 ### veja o projeto 
 
-Clique [aqui](https://rick-and-morty-psi-five.vercel.app/) e veja o projeto funcionando.
+Clique [aqui](https://rick-and-morty-tau-coral.vercel.app/) e veja o projeto funcionando.
 
 ## Funcionalidades 🎯
 
@@ -32,7 +32,7 @@ Clique [aqui](https://rick-and-morty-psi-five.vercel.app/) e veja o projeto func
    - Isso criará uma cópia do projeto em sua máquina.
 
 2. **Inicie o Servidor Local**:
-   - com o liver server inicie um servidor local
+   - com o live server inicie um servidor local
 
 
 ## Imagens 📷
@@ -41,16 +41,16 @@ A seguir, você pode ver algumas capturas de tela do projeto em funcionamento:
 
 - Imagem desktop:
 
-![](../rick-and-morty/src/assets/image/capturas/dasktop.png)
+![](/src/assets/image/capturas/dasktop.png)
 
 - Imagem Ipad: 
 
-![](../rick-and-morty/src/assets/image/capturas/ipad.png)
+![](/src/assets/image/capturas/ipad.png)
 
 - Imagem Mobile:
 
-![](../rick-and-morty/src/assets/image/capturas/mobile.png)
+![](/src/assets/image/capturas/mobile.png)
 
 - Imagem Pesquisa: `Rick Sanches`
 
-![](../rick-and-morty/src/assets/image/capturas/pesquisa-rick.png)
+![](/src/assets/image/capturas/pesquisa-rick.png)
