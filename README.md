@@ -41,16 +41,16 @@ A seguir, você pode ver algumas capturas de tela do projeto em funcionamento:
 
 - Imagem desktop:
 
-![](../rick-and-morty/src/assets/image/capturas/dasktop.png)
+![](/src/assets/image/capturas/dasktop.png)
 
 - Imagem Ipad: 
 
-![](../rick-and-morty/src/assets/image/capturas/ipad.png)
+![](/src/assets/image/capturas/ipad.png)
 
 - Imagem Mobile:
 
-![](../rick-and-morty/src/assets/image/capturas/mobile.png)
+![](/src/assets/image/capturas/mobile.png)
 
 - Imagem Pesquisa: `Rick Sanches`
 
-![](../rick-and-morty/src/assets/image/capturas/pesquisa-rick.png)
+![](/src/assets/image/capturas/pesquisa-rick.png)
