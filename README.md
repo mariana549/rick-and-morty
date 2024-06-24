@@ -4,7 +4,7 @@ Este projeto é um desafio pessoal que propus a mim mesma para praticar mais sob
 
 ### veja o projeto 
 
-Clique [aqui](https://rick-and-morty-psi-five.vercel.app/) e veja o projeto funcionando.
+Clique [aqui](https://rick-and-morty-tau-coral.vercel.app/) e veja o projeto funcionando.
 
 ## Funcionalidades 🎯
 
